@@ -20,7 +20,7 @@ def presentation():
     print("*****************************")
     print()
 
-def recup_mot():
+def recuperer_mot():
     """
     Là on définit une fonction qui renvoie un mot aléatoire d'une liste de plusieurs mots
     """
@@ -91,10 +91,10 @@ def main():
     fonction principale du jeu, servant de point d'entrée au programme, elle permet aussi d'effectuer plusieurs manches
     """
     presentation()
-    word = recup_mot()
+    word = recuperer_mot()
     jouer(word)
     while input("Voulez-vouz rejouer ? (O/N) ").upper() == "O":
-        word = recup_mot()
+        word = recuperer_mot()
         jouer(word)
 
 
