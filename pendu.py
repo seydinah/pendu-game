@@ -37,6 +37,7 @@ def play_again():
     reponse = input("Voulez vous rejouer à nouveau? oui/non. Tapez 'O' pour Oui or 'N' pour Non: ").lower()
 
     if reponse == "o" or reponse == "O":
+        welcome()
         jouer()
     else:
         print("A plutard !!")
@@ -87,11 +88,11 @@ def jouer():
             if proposition in devine_lettre:
                 print("Vous avez dèja saisi cette lettre! Essayez encore")
             elif proposition not in word:
-                print("Desolé ! la lettre n'est pas dans le mot! ")
+                print(f"Desolé ! la lettre {proposition} n'est pas dans le mot! ")
                 devine_lettre.append(proposition)
                 tentatives -=1
             elif proposition in word:
-                print("Bien vu!")
+                print(f"Bien vu! {proposition} est dans le mot, continuez")
                 devine_lettre.append(proposition)
             else:
                 print("Mauvais saisi! ")
